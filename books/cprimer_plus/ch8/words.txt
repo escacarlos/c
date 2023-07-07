@@ -1,0 +1,4 @@
+Hi this is a text file
+the purpose of this file is
+to test the file input
+45 62 78 98 !! -= ';
