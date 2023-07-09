@@ -2,8 +2,8 @@
 *.exe
 *.obj
 *.o
-./vscode/launch.json
-./vscode/settings.json
-./vscode/tasks.json
-./vscode/setting.json
-./vscode/tasks.json
+./.vscode/launch.json
+./.vscode/tasks.json
+./.vscode/settings.json
+./.vscode/setting.json
+
