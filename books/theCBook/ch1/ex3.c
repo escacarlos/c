@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-main() {
-
-    int l,c;
-    l=0;
-    while((c=getchar())!=EOF){
-        if(c=='\b')
-            ++l;
-    }
-    printf("%d\n",l);
+main()
+{
+    int nl, c;
+    nl = 0;
+    while ((c = getchar()) != EOF)
+        if (c == '\n')
+            ++nl;
+    printf("%d\n", nl);
 }

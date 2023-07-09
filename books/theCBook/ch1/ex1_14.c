@@ -18,7 +18,7 @@ int main()
     {
         putchar(i);
 
-        for (j = 0; j < _char[i]; ++i)
+        for (j = 0; j < _char[i]; ++j)
             putchar('*');
 
         putchar('\n');
