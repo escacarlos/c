@@ -3,5 +3,10 @@
 *.obj
 *.o
 ./vscode/launch.json
+<<<<<<< HEAD
 ./vscode/settings.json
 ./vscode/tasks.json
+=======
+./vscode/setting.json
+./vscode/tasks.json
+>>>>>>> 0d464a5d429aecff035eb9f956377e675a308e89
