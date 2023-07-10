@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "C:\\Users\\escac\\Documents\\winlibs-x86_64-mcf-seh-gcc-13.1.0-llvm-16.0.2-mingw-w64ucrt-11.0.0-r1\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always", "-std=c2x", "-Wall" , "-Wextra", "-pedantic", //"-O3",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"isDefault": true,
+				"kind": "build",
+				"detail": "compiler: C:\\Users\\escac\\Documents\\winlibs-x86_64-mcf-seh-gcc-13.1.0-llvm-16.0.2-mingw-w64ucrt-11.0.0-r1\\mingw64\\bin\\gcc.exe"
+			},
+			
+		}
+	]
+}
