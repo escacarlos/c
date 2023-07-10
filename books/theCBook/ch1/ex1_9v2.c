@@ -2,6 +2,7 @@
 
 #define MAXLINE 1000
 
+/* Use of external variables */
 int max;
 char line[MAXLINE];
 char longest[MAXLINE];
