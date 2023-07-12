@@ -22,7 +22,7 @@
 				"isDefault": true,
 				"kind": "build",
 				"detail": "compiler: E:\\SDKs\\zips\\winlibs-x86_64-mcf-seh-gcc-13.1.0-llvm-16.0.2-mingw-w64ucrt-11.0.0-r1\\mingw64\\bin\\gcc.exe"
-			},
+			}
 			
 		}
 	]

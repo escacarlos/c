@@ -6,11 +6,11 @@
 			"label": "C/C++: gcc build active file",
 			"command": "/bin/gcc",
 			"args": [
-				"-fdiagnostics-color=always", "-std=c2x", "-Wall" , "-Wextra", "-pedantic", "-O3",
+				"-fdiagnostics-color=always", "-std=c2x", "-Wall" , "-Wextra", "-pedantic", //"-O3",
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${fileDirname}/${fileBasenameNoExtension}.out"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -22,7 +22,7 @@
 				"isDefault": true,
 				"kind": "build",
 				"detail": "compiler: /bin/gcc"
-			},
+			}
 			
 		}
 	]
