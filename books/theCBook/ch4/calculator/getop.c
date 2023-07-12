@@ -28,6 +28,6 @@ int getop(char s[])     /* getop: get next character or numeric operand */
             ;
     s[i] = '\0';
     if (c != EOF)
-        buf = c;
+        ungetch(c);
     return NUMBER;
 }
