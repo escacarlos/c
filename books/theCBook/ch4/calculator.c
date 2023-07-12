@@ -2,9 +2,9 @@
 #include <ctype.h>
 #define MAXLINE 100
 
-int getline_c2(char s[], int lim);
-double atof(char s[]);
-int atoi(char s[]);
+// int getline_c2(char s[], int lim);
+// double atof(char s[]);
+// int atoi(char s[]);
 /* rudimentary calculator */
 int main()
 {
