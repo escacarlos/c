@@ -14,4 +14,4 @@ int atoi(char s[])
     /* skip white space */
     /* skip sign */
 }
-/*STD LIB strto1*/
+/*STD LIB strtol*/
