@@ -64,7 +64,8 @@ int main()	{
 	double array[BUFFER];
 
 	for (n = 0; n < BUFFER && getfloat(&array[n]) != EOF; n++);
-	printf("%f\n", array[0]);
+	for (int i = 0; i < 10; ++i)
+		printf("%f\n", array[i]);
 
 	return 0;
 }

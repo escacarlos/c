@@ -40,7 +40,7 @@ int main(void)
             strcpy(testbuff, test[thistest]);
             strcat(testbuff, test[inner]);
 
-            printf("[%s] + [%s] = [%s]\n", test[thistest], test[inner], testbuff);
+            printf("[%s] + [%s] = [%s]\n", test[thistest], test[inner], &testbuff[0]);
         }
     }
 
