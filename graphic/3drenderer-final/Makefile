@@ -1,8 +1,8 @@
 build:
-	gcc -Wall -Wfatal-errors -std=c99 ./src/*.c -lSDL2 -lm -o renderer
+	gcc -Wall -Wfatal-errors -std=c99 ./src/*.c -lSDL2 -lm -o renderer.out
 
 run:
-	./renderer
+	./renderer.out
 
 clean:
-	rm renderer
+	rm renderer.out
