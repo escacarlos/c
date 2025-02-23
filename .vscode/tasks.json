@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "D:\\SDKs\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-std=c2x",
+				"-Wall",
+				"-Wextra",
+				"-pedantic", //"-O3",
+				// "-fsanitize=address",
+				// "-fsanitize=undefined",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"isDefault": true,
+				"kind": "build",
+				"detail": "compiler: D:\\SDKs\\mingw64\\bin\\gcc.exe"
+			}
+		}
+	]
+}
