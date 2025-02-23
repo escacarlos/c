@@ -49,35 +49,35 @@ void ListeCirculaire_Joueur_destroy(ListeCirculaire_Joueur *liste) {
 }
 
 ListeCirculaire_Joueur *
-ListeCirculaire_Joueur_copy(ListeCirculaire_Joueur *liste, const ListeCirculaire_Joueur *source) {
+ListeCirculaire_Joueur_copy(ListeCirculaire_Joueur *copy, const ListeCirculaire_Joueur *source) {
     if (source->dernier == NULL) {
-        liste->dernier = NULL;
-        return liste;
+        copy->dernier = NULL;
+        return copy;
     } else {
-        liste->dernier = (Noeud_Joueur *) malloc(sizeof(Noeud_Joueur));
-        liste->dernier->element = source->dernier->element;
-        if (liste->dernier == NULL) {
+        copy->dernier = (Noeud_Joueur *) malloc(sizeof(Noeud_Joueur));
+        copy->dernier->element = source->dernier->element;
+        if (copy->dernier == NULL) {
             perror("Failed to allocate memory for Noeud_Joueur");
-            ListeCirculaire_Joueur_destroy(liste);
+            ListeCirculaire_Joueur_destroy(copy);
             exit(EXIT_FAILURE);
         }
 
-        Noeud_Joueur *nouveau = liste->dernier;
+        Noeud_Joueur *nouveau = copy->dernier;
         for (Noeud_Joueur *temp = source->dernier->suivant; temp != source->dernier; temp = temp->suivant) {
             nouveau->suivant = (Noeud_Joueur *) malloc(sizeof(Noeud_Joueur));
             if (nouveau->suivant == NULL) {
                 perror("Failed to allocate memory for Noeud_Joueur");
-                ListeCirculaire_Joueur_destroy(liste);
+                ListeCirculaire_Joueur_destroy(copy);
                 exit(EXIT_FAILURE);
             }
 
             nouveau->suivant->element = temp->element;
             nouveau = nouveau->suivant;
-            nouveau->suivant = liste->dernier;
+            nouveau->suivant = copy->dernier;
         }
-        nouveau->suivant = liste->dernier;
+        nouveau->suivant = copy->dernier;
     }
-    return liste;
+    return copy;
 }
 
 int ListeCirculaire_Joueur_taille(const ListeCirculaire_Joueur *liste) {

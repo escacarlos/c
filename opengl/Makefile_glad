@@ -1,0 +1,28 @@
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -O2
+
+# Libraries
+LIBS = -lglfw -lGL -lm
+
+# Source files
+SRCS = main.c glad.c
+OBJS = $(SRCS:.c=.o)
+
+# Output executable
+TARGET = cylinder_glad
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET) $(LIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+
+#make -f Makefile_glad
+#./cylinder_glad
+#make -f Makefile_glad clean

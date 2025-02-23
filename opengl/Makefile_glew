@@ -1,0 +1,29 @@
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -O2
+
+# Libraries
+LIBS = -lGLEW -lglfw -lGL -lm
+
+# Source files
+SRCS = main.c
+OBJS = $(SRCS:.c=.o)
+
+# Output executable
+TARGET = cylinder_glew
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET) $(LIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+	
+#make -f Makefile_glew
+#./cylinder_glew
+#make -f Makefile_glew clean
+
